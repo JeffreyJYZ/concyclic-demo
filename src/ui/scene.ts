@@ -90,7 +90,8 @@ export function draw(canvas: HTMLCanvasElement, scene: Scene) {
 		ctx.fillStyle = muted;
 		ctx.font = `12px ${MONO}`;
 		ctx.textAlign = "right";
-		ctx.fillText(caption(t), width - 26, height - 58);
+		const bottom = width < 640 ? 104 : 58;
+		ctx.fillText(caption(t), width - 26, height - bottom);
 		ctx.textAlign = "left";
 	}
 }

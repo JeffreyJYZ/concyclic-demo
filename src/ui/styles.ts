@@ -81,4 +81,16 @@ p { margin: 0; max-width: 44ch; font-size: 12.5px; color: var(--muted); }
 }
 .zoom { right: clamp(14px, 2.6vw, 26px); bottom: clamp(14px, 2.6vw, 26px); }
 .mode { right: clamp(14px, 2.6vw, 26px); top: clamp(14px, 2.6vw, 26px); }
+@media (max-width: 640px) {
+	header { padding: 14px 16px; }
+	p { font-size: 12px; }
+	.panel button { height: 36px; }
+	.mode {
+		top: auto;
+		left: 12px;
+		right: 12px;
+		bottom: calc(62px + env(safe-area-inset-bottom));
+	}
+	.zoom { right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); }
+}
 `;
